@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yummy Pet Palate</title>
+<link rel="icon" href="assets/image/logo.png">
+<link rel="stylesheet" href="assets/style.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+<link rel="stylesheet" href="assets/login.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body style="background-color: rgb(243, 155, 184) ;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/image/logo.png" alt="Yummy Pet Palate" class="
+                      logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto ">
+         
+          <li class="nav-item mt-1">
+            <button class="cart">
+              <i id="cart-shop" class="shopping quantity fa-solid fa-cart-shopping fa-lg" style="color: #c187d1;"></i>
+              <i id="cart-shop-open" class="fa-solid fa-cart-plus fa-lg" style="color: #c187d1;"></i>
+            </button>
+  
+          </li>
+          <li class="nav-item mx-2 mt-1">
+            <button class="icon-login" id="user-btn">
+              <i class="fa-solid fa-user-plus fa-lg" style="color: #c187d1;"></i>
+            </button>
+  
+          </li>
+          <li class="nav-item ">
+            <div id="navigation">
+              <div id="menu" onclick="onclickmenu()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+              </div>
+              <ol id="nav" class="nav">
+                <li><img src="assets/image/home.png" alt="home" class="icon"><a href="index.html">Home</a></li>
+                <li><a href="category.html"><img src="assets/image/categories.png" alt="category"
+                      class="icon">Category</a></li>
+                <li><a href="blogs.html"><img src="assets/image/blogger.png" alt="contact" class="icon">Blogs</a>
+                </li>
+                <li><a href="contact.html"><img src="assets/image/telephone.png" alt="blog" class="icon">Contact</a>
+                </li>
+              </ol>
+            </div>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ends -->
+
+<!-- LOGIN STARTS -->
+<div class="overlay" id="overlay">
+  <div class="overlay-content">
+    <div class="section">
+      <div class="container">
+        <div class="row full-height justify-content-center">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+              <h6 class="mb-0 pb-3"><span class="login">LOG IN</span><span class="login">SIGN UP</span></h6>
+              <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+              <label for="reg-log"></label>
+              <div class="card-3d-wrap mx-auto">
+                <div class="card-3d-wrapper">
+                  <div class="card-front">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">LOG IN
+                        </h4>
+                        <div class="form-group">
+                          <input type="email" class="form-style" placeholder="Email" required
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="password" class="form-style" placeholder="Password" required>
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <a href="index.html" class="btn mt-4" id="sumbit">Login</a>
+                        <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot
+                            your
+                            password?</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <form action="register.php" method="post">
+                          <h4 class="mb-3 pb-3">SIGN UP</h4>
+                          <div class="form-group">
+                            <input type="text" class="form-style" placeholder="Full Name" name="name" required
+                              pattern="[a-zA-Z ]+">
+                            <i class="input-icon uil uil-user"></i>
+                          </div>
+                          <div class="form-group mt-2">
+                            <input type="tel" class="form-style" placeholder="Phone Number" name="phone" required
+                              pattern="[0-9]{10}">
+                            <i class="input-icon uil uil-phone"></i>
+                          </div>
+                          <div class="form-group mt-2">
+                            <input type="email" class="form-style" placeholder="Email" name="email" required
+                              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                            <i class="input-icon uil uil-at"></i>
+                          </div>
+                          <div class="form-group mt-2">
+                            <input type="password" class="form-style" placeholder="Password" name="pass" required
+                              pattern=".{6,}">
+                            <i class="input-icon uil uil-lock-alt"></i>
+                          </div>
+                          <button type="submit" class="btn mt-4 " name="send" id="sumbit">Register</button>
+                        </form>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="close-btn" id="close-btn">&times;</div>
+</div>
+
+
+<!-- LOGIN ENDS -->
+  <!-- Navbar End -->
+
+  
+
+  <!-- cat category start -->
+    <h1 class="cat-heading">"DOG CATEGORY"🍗</h1>
+    <!-- filter -->
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <h3 class="filterby">FILTER BY</h3>
+      </div>
+      <div class="col-10">
+        <select onchange="filterItems(this.value)" id="filter">
+          <option value="All">All products</option>
+          <option value="food">Food</option>
+          <option value="accessories">Accessories</option>
+          <option value="medicines">Medicines</option>
+        </select>
+        </div>
+    </div>
+  </div>
+
+
+<!-- cart -->
+<div class="container">
+  <div class="list">
+  </div>
+</div>
+<div class="card">
+  <h1>Cart</h1>
+  <ul class="listCard">
+  </ul>
+
+  <div class="checkOut">
+
+    <div class="total"></div>
+    <div class="checkout"><a href="checkout.html" style="text-decoration: none; color: white;">Checkout</a></div>
+
+  </div>
+  <i class="fa-regular fa-circle-xmark closeShopping" style="color: #000000;"></i>
+</div>
+
+
+  <!-- start footer -->
+  <div class="container-fluid mt-3" id="footer-bg">
+  
+    <div class="row">
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 ml-0" id="footer-one">
+        <img class="footer-logo" src="assets/image/logo.png" alt="Footer">
+        <p class="footer-para mt-2" style="font-weight: bold;">A PET LOVER PARADISE</p>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-two">
+        <img class="footer-img1" src="assets/image/blogimg4.png" alt="Footer">
+        <p class="footer-para mt-3">Cherish every moment with your pet and create cute memories that'll last a
+          lifetime.
+        </p>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-three">
+        <img src="assets/image/footer.png" alt="Footer" class="footer-img1">
+        <p class="footer-para">Remember to provide them with the care, attention, and love they deserve.</p>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 " id="footer-four">
+        <span class="footer-connect ">Connect With Us Through: </span>
+        <section id="footersocial">
+          <a href="https://twitter.com/" target="_blank"><img src="assets/image/twitter.png" alt="twitter"
+              id="social-icon"></a>
+          <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><img src="assets/image/google.png"
+              alt="gmail" id="social-icon"></a>
+          <a href="https://pk.linkedin.com/" target="_blank" role="button"><img src="assets/image/linkedin.png"
+              alt="Linkedin" id="social-icon"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/instagram.png" alt="instagram"
+              id="social-icon"></a>
+        </section>
+        <h6 class="mt-2">Useful Links:</h6>
+        <p class="footer-links"><a href="index.html">Home</a><a href="category.html">Category</a> <a
+            href="blogs.html">Blogs</a><a href="contact.html">Contact</a></p>
+      </div>
+    </div>
+  
+  </div>
+  <!-- Footer End -->
+
+
+
+
+
+
+
+<!-- script -->
+<script>
+  
+// cart
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
+
+
+if (openShopping) {
+  openShopping.addEventListener('click', () => {
+    body.classList.add('active');
+  });
+}
+
+/*openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})*/
+closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+})
+
+let products = [
+    {
+        id: 1,
+        name: 'Ultra',
+        image: 'food01.png',
+        price: '2200',
+        filter:'food'
+    },
+    {
+      id: 2,
+      name: 'Pedigree',
+      image: 'food2.png',
+      price: '1800',
+      filter:'food'
+  }
+  ,
+  {
+    id: 3,
+    name: 'Hypro',
+    image: 'food3.png',
+    price: 4000,
+    filter:'food'
+} 
+,
+    {
+      id: 4,
+      name: 'Woof',
+      image: 'food4.png',
+      price: 2600,
+      filter:'food'
+  }
+  ,
+  {
+    id: 5,
+    name: 'Puppy paw',
+    image: 'food5.png',
+    price: 3100,
+    filter:'food'
+}
+,
+    {
+      id: 6,
+      name: 'Pedigree',
+      image: 'food6.png',
+      price: 2300,
+      filter:'food'
+  }
+  ,
+  {
+    id: 7,
+    name: 'Pedigree',
+    image: 'dogjelly1.png',
+    price: 500,
+    filter:'food'
+}
+,
+    {
+      id: 8,
+      name: 'Husky',
+      image: 'dogjelly02.png',
+      price: 550,
+      filter:'food'
+  }
+,
+{
+  id: 9,
+  name: 'Bona Cibo',
+  image: 'dogjelly3.png',
+  price: 650,
+  filter:'food'
+},
+{
+  id: 10,
+  name: 'Winalot',
+  image: 'dogjelly4.png',
+  price: 450,
+  filter:'food'
+},
+{
+  id: 11,
+  name: 'Whiskas',
+  image: 'dogjelly5.png',
+  price: 800,
+  filter:'food'
+}
+,
+{
+  id: 12,
+  name: 'Cesar',
+  image: 'dogjelly6.png',
+  price: 300,
+  filter:'food'
+},
+{
+  id: 13,
+  name: 'Bag',
+  image: 'acc1.png',
+  price: 2200,
+  filter:'accessories'
+},
+{
+id: 14,
+name: 'Cage',
+image: 'acc2.png',
+price: 4000,
+filter:'accessories'
+}
+,
+{
+id: 15,
+name: 'Leash',
+image: 'acc3.png',
+price: 700,
+filter:'accessories'
+} 
+,
+{
+id: 16,
+name: 'Shoulder Bag',
+image: 'acc4.png',
+price: 2600,
+filter:'accessories'
+}
+,
+{
+id: 17,
+name: 'bag',
+image: 'acc5.png',
+price: 1500,
+filter:'accessories'
+}
+,
+{
+id: 18,
+name: 'house',
+image: 'acc6.png',
+price: 5500,
+filter:'accessories'
+}
+,
+{
+id: 19,
+name: 'Collar',
+image: 'acc7.png',
+price: 1000,
+filter:'accessories'
+},
+{
+id: 20,
+name: 'Bowls',
+image: 'acc8.png',
+price: 550,
+filter:'accessories'
+}
+
+,
+{
+id: 21,
+name: 'Carrier',
+image: 'acc9.png',
+price: 4000,
+filter:'accessories'
+}
+
+
+,
+{
+id: 22,
+name: 'Bravecto',
+image: 'dmed1.png',
+price: 1000,
+filter:'medicines'
+}
+
+,
+{
+id: 23,
+name: 'Vomitol',
+image: 'dmed02.png',
+price: 1200,
+filter:'medicines'
+}
+
+,
+{
+id: 24,
+name: 'Digyton',
+image: 'dmed3.png',
+price: 900,
+filter:'medicines'
+}
+
+,
+{
+id: 25,
+name: 'Dfender Plus',
+image: 'dmed4.png',
+price: 1550,
+filter:'medicines'
+}
+,
+{
+id: 26,
+name: 'Simparica TRIO',
+image: 'dmed5.png',
+price: 650,
+filter:'medicines'
+}
+
+,
+{
+id: 27,
+name: 'Allergy Immune Trears',
+image: 'dmed6.png',
+price: 800,
+filter:'medicines',
+
+}
+
+
+];
+let listCards  = [];
+function initApp(){
+    products.forEach((value, key) =>{
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+        <div class= "container">
+          <div class="row">
+        <div class = "card">
+      <div class = "image">
+        <img src="assets/image/${value.image}">
+      </div>
+      <div class = "content">
+       <h2 style="font-family: pacifio;" class="title"> ${value.name}</h2>
+       <h4 style="font-family: pacifio;" class="price">${value.price}</h4>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <button onclick="addToCard(${key})">Add To Cart</button>
+    </div>  
+  </div>  
+</div>  `
+        list.appendChild(newDiv);
+    })
+}
+initApp();
+function addToCard(key){
+    if(listCards[key] == null){
+        // copy product form list to list card
+        listCards[key] = JSON.parse(JSON.stringify(products[key]));
+        listCards[key].quantity = 1;
+    }
+    reloadCard();
+}
+function reloadCard(){
+    listCard.innerHTML = '';
+    let count = 0;
+    let totalPrice = Number();
+    listCards.forEach((value, key)=>{
+        totalPrice = totalPrice + Number(value.price);
+        count = count + value.quantity;
+        if(value != null){
+            let newDiv = document.createElement('li');
+            newDiv.innerHTML = `
+                <div><img src="assets/image/${value.image}"/></div>
+                <div>${value.name}</div>
+                <div>${value.price.toLocaleString()}</div>
+                <div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <div class="count">${value.quantity}</div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                </div>`;
+                listCard.appendChild(newDiv);
+        }
+    })
+    total.innerText = totalPrice.toLocaleString();
+    quantity.innerText = count;
+}
+function changeQuantity(key, quantity){
+    if(quantity == 0){
+        delete listCards[key];
+    }else{
+        listCards[key].quantity = quantity;
+        listCards[key].price = quantity * products[key].price.toLocaleString();
+    }
+    reloadCard();
+  }
+  function filterItems(filter) {
+    list.innerHTML = ''; // Clear the existing items in the list
+  
+    products.forEach((value, key) => {
+      if (value.filter === filter) {
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+        <div class= "container">
+          <div class= "row">
+        <div class = "card">
+      <div class = "image">
+        <img src="assets/image/${value.image}">
+      </div>
+      <div class = "content">
+       <h2 style="font-family: pacifio;" class="title"> ${value.name}</h2>
+       <h4 style="font-family: pacifio;" class="price">${value.price.toLocaleString()}</h4>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <button onclick="addToCard(${key})">Add To Cart</button>
+    </div> 
+  </div> 
+</div>  `
+            list.appendChild(newDiv);
+      }
+    });
+    products.forEach((value, key) => {
+  if (filter === 'All' || value.filter === filter) {
+    let newDiv = document.createElement('div');
+    newDiv.classList.add('item');
+    newDiv.innerHTML = `
+      <div class="card">
+        <div class="image">
+          <img src="assets/image/${value.image}">
+        </div>
+        <div class="content">
+          <h2 style="font-family: pacifico;" class="title">${value.name}</h2>
+          <h4 style="font-family: pacifico;" class="price">${value.price.toLocaleString()}</h4>
+          <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+          <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+          <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+          <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+          <button onclick="addToCard(${key})">Add To Cart</button>
+        </div>
+      </div>`;
+    list.appendChild(newDiv);
+  }
+});
+
+  }
+</script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
